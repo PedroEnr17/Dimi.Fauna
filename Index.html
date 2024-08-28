@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Aleatório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #nome {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Nome Aleatório</h1>
+    <button onclick="gerarNome()">Gerar Nome</button>
+    <div id="nome"></div>
+
+    <script>
+        function gerarNome() {
+            const nomes = ["Maria Panela", "Eva e Adão", "Osvaldo das Dores", "Osvaldo Pinto Rosa", "Delicia Costa Melo", "Fodelicia dos Santos", "Farao do Egito", "Xerox"];
+            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+            document.getElementById("nome").textContent = nomeAleatorio;
+        }
+    </script>
+</body>
+</html>
